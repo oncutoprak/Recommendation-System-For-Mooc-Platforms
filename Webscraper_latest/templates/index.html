@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Bitirme</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+     
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></link>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+  </head>
+  <body>
+    <div class="loader hidden">
+      <img src="loading.gif" alt="loading..." />
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <div class="row col-md-12">
+            <div class="col-md-3 float-left ">
+                <a href="http://127.0.0.1:5000" ><img src="static/img/udemy.png" alt="" width="120px;" ></a>
+            </div>
+            <div class="example col-md-6">
+                <input id="txt" type="text" placeholder="Kurs Ara" />
+                <button type="button" id="btn"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="col-md-3">
+              
+            </div>
+        </div>
+      </div>
+    </nav>
+
+    <hr id="navbarHr">
+
+    <!-- <div class="row">
+      <div class="float-right col-md-3">
+        <a href="http://127.0.0.1:5500/Bitirme/index.html"><img src="./img/udemy.png" alt="" width="150px;"></a>
+        
+      </div>
+      <div class="example mt-3 col-md-6">
+      <input id="txt" type="text" placeholder="Dilediğiniz şeyi arayın" />
+      <button type="button" id="btn"><i class="fa fa-search"></i></button>
+    </div>
+    <div class="col-md-3">
+      
+    </div>
+    </div> -->
+    
+    <!-- Arama (Search) -->
+    
+    <!-- <button class="btn btn-info" id="scrape">Scrape Et</button> -->
+    <div id="allFilter" class="mt-0">
+    
+    <div>
+    <div id="loading">
+      <p style="position: absolute; color: White; top: 50%; left: 45%;">
+        <img src="loading.gif" alt="loading..." width="100" />
+      </p>
+    </div>
+    <label id="totalCourseCount" for="totalCourseCount"></label>
+    <div>
+    <div id="orderCourse">
+      <select class="btn btn-light float-right" id="Sırala" onchange="order(this);">
+        <option value="" selected disabled hidden>Sırala </option>
+        <option value="relevance">En Alakalı</option>
+        <option value="newest">En Çok Değerlendirilen</option>
+        <option value="highest-rated">En Yüksek Puan Alan</option>
+        <option value="most-reviewed">En Yeni</option>
+        <option value="price-high-to-low">En Düşük Fiyat</option>
+        <option value="price-low-to-high">En Yüksek Fiyat</option>
+      </select>
+    </div>
+    <div class="float-right" id="tumFiltreler">
+        <button  class="btn btn-light">
+            <i class="fas fa-filter"></i> Tüm Filtreler
+          </button>
+    </div>
+  </div>
+</div>
+  <br><br><hr>
+  
+    <div id="filtreler">
+        <div class="float-right" id="filtreUygulaIptal">
+            <button id="filtreCalistir" class="btn btn-outline-success">
+                Uygula
+              </button>
+              <button id="filtreTemizle" class="btn btn-outline-danger">İptal</button>
+        </div>
+
+      <div>
+        <div class="row mt-4 ml-4 filters">
+          <div class="col-md-3">
+            <b>Dil</b><br />
+            
+            <input type="checkbox" class="language" id="checkbox1" value="en" />
+            <label for="checkbox1">İngilizce <span id="en" class="text-muted"></span></label>
+
+            <input type="checkbox" class="language" id="checkbox2" value="pt" />
+            <label for="checkbox2">Portekizce <span id="pt" class="text-muted"></span></label>
+            
+            <input type="checkbox" class="language" id="checkbox3" value="es" />
+            <label for="checkbox3">İspanyaca <span id="es" class="text-muted"></span></label>
+            
+            <input type="checkbox" class="language" id="checkbox4" value="tr" />
+            <label for="checkbox4">Türkçe <span id="tr" class="text-muted"></span></label>
+            
+          </div>
+          <div id="ratings" class="col-md-3">
+            <b>Puan</b><br />
+            <input type="checkbox" class="chk" id="chk1" value="4.5" />
+            <label for="chk1">4.5 ve üzeri <span id="rating45" class="text-muted"></span></label>
+            
+            <input type="checkbox" class="chk" id="chk2" value="4.0" />
+            <label for="chk2">4.0 ve üzeri <span id="rating40" class="text-muted"></span></label>
+            
+            <input type="checkbox" class="chk" id="chk3" value="3.5" />
+            <label for="chk3">3.5 ve üzeri <span id="rating35" class="text-muted"></span></label>
+            
+            <input type="checkbox" class="chk" id="chk4" value="3.0" />
+            <label for="chk4">3.0 ve üzeri <span id="rating30" class="text-muted"></span></label>
+            
+          </div>
+
+          <div id="duration" class="col-md-3">
+              <b>Süre</b><br />
+              <input type="checkbox" class="duration" id="duration1" value="short" />
+              <label for="duration1">0-2 Saat <span id="durationSort" class="text-muted"></span></label>
+              
+              <input type="checkbox" class="duration" id="duration2" value="medium" />
+              <label for="duration2">3-6 Saat <span id="durationMedium" class="text-muted"></span></label>
+              
+              <input type="checkbox" class="duration" id="duration3" value="long" />
+              <label for="duration3">7-16 Saat <span id="durationLong" class="text-muted"></span></label>
+              
+              <input type="checkbox" class="duration" id="duration4" value="extraLong" />
+              <label for="duration4">17+ Saat <span id="durationExtraLong" class="text-muted"></span></label>
+              
+            </div>
+
+        </div>
+      </div>
+      <hr>
+    </div>
+    
+    <div class="row ml-3">
+        <button class="btn btn-warning btn-sm mr-2 " id="allComments">Tümünü Seç</button><br><br>
+        <button class="btn btn-primary mr-2 " id="yorumlariYazdir">Yorumları Yazdır</button><br>
+        <button class="btn btn-success" id="downloadComment">Download</button><br>
+    </div>
+    
+    
+    </div>
+    
+    <div class="row" id="rowLessonList">
+
+      <div class="container w-75 mx-auto my-4">
+          <div id="lessonsList" class="col-md-5">
+
+          </div>
+          <div id="holder"></div>
+          <ul id="pagination-demo" class="pagination-lg pull-right"></ul>
+      </div>
+      
+      <!-- Arama sonuçlarına göre sayfalama (pagination) -->
+      
+      <!-- Yorumların geldiği yer --> 
+      <div id="comment" class="col-md-12">
+        <!-- <button class="btn btn-success float right" id="downloadComment">Download</button> -->
+        <p id="commentFor"></p>
+        <table id="myTable" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th >#</th>
+              <th >Name</th>
+              <th >Id</th>
+              <th >Content</th>
+              <th >Rating</th>
+              <th >Date</th>
+            </tr>
+          </thead>
+          <tbody id="comments"></tbody>
+        </table>
+      </div>
+        <div id="patates">
+
+        </div>
+    </div>
+    
+
+    <!-- Puanlandırma filtrelerinden sadece birinin seçilmesini sağlar. -->
+    <script>
+      $("input.chk").on("change", function() {
+        $("input.chk")
+          .not(this)
+          .prop("checked", false);
+      });
+    </script>
+    <script type="text/javascript">
+      window.addEventListener("get", function() {
+        const loader = document.querySelector(".loader");
+        loader.className += " hidden";
+      });
+    </script>
+    
+
+
+    <!-- <script>
+      $("#btn").keyup(function(event) {
+          if (event.keyCode === 13) {
+              $("#btn").click();
+          }
+      });
+    </script> -->
+    <script src="http://pagination.js.org/dist/2.1.4/pagination.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script> -->
+    <!-- <script src="aa.js"></script> -->
+    <!-- <script src="scrape.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+   
+    <script type="text/javascript" src="/static/script/script.js"></script>
+    
+  </body>
+</html>
+

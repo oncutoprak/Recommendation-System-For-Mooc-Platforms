@@ -1,0 +1,334 @@
+body {
+  margin: 5px;
+}
+
+#comment {
+  margin-top: 15px;
+  display: none;
+}
+
+/*Search*/
+* {
+  box-sizing: border-box;
+}
+
+div.example {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Style the search field */
+div.example input[type="text"] {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+div.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #f1f1f1;
+  color: red;
+  font-size: 14px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+div.example button:hover {
+  background: red;
+  color: white;
+}
+
+/* Clear floats */
+div.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*Search end*/
+
+#rowLessonList {
+  margin: 2px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/*Yorum Butonu*/
+#btnYorumGoster {
+  margin-right: 10px;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+#tumFiltreler {
+  float: right;
+  margin-right: 7px;
+  display: none;
+  height: 1px;
+  
+  
+}
+#filtreUygulaIptal{
+    
+}
+#hr {
+  margin-top: 50px;
+}
+
+#filtreler {
+  margin-top: 3%;
+  margin-right: 75px;
+  display: none;
+}
+div #filtreCalistir,
+#filtreTemizle {
+  float: right;
+  margin-top: 10px;
+  margin-left: 20px;
+  
+}
+/* Puan - Ratings */
+.checked {
+  color: orange;
+}
+
+/*Ders sonuç sayısını sol üstte yazan buton*/
+btn.btn-info {
+  float: left;
+  margin-left: 20px;
+}
+#totalCourseCount {
+  margin-left: 20px;
+  display: block;
+}
+/*Tablo başlıkları*/
+thead th {
+  
+}
+
+.loader {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*Sayfanın yüklenme süresi (Page load)*/
+.loader.hidden {
+  animation: fadeOut 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loader > img {
+  width: 100px;
+}
+
+#loading {
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(102, 102, 102);
+  z-index: 30001;
+  opacity: 0.8;
+  display: none;
+}
+#Sırala {
+  margin-right: 30px;
+  border: 1px solid #cacbcc;
+  
+ 
+
+  border-top-width: 2px;
+}
+#allFilter {
+  background-color: #f5f5f5;
+  margin-top: 3px;
+}
+input[type="checkbox"] + label {
+  display: block;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label:before {
+  content: "\f096";
+  font-family: "FontAwesome";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  width: 1em;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+input[type="checkbox"]:checked + label:before {
+  content: "\f14a";
+  color: #2980b9;
+}
+input[type="checkbox"]:checked + label {
+  font-weight: bold;
+}
+label {
+  cursor: pointer;
+}
+
+.page-item{
+  display: inline-block;
+}
+
+/*Pagination Sayfalama*/
+.pagination {
+  display: inline-block;
+}
+
+.pagination button{
+  float:left;
+  padding: 4px 8px;
+  text-decoration: none;
+  border:1px solid #dee2e6;
+  color:blue;
+  background-color:white;
+  min-width: 35px;
+}
+
+.pagination .active{
+  background-color:#4CAF50;
+  border:1px solid #4CAF50;
+  color:white;
+}
+
+.pagination button:hover:not(.active){
+  background-color: #ddd;
+}
+
+.container {
+  margin-top: 20px;
+}
+.page {
+  display: none;
+}
+.page-active {
+  display: block;
+}
+
+a img{
+  cursor: pointer;
+}
+
+#orderCourse{
+  display: none;
+}
+
+/*Sayfalama */
+
+#holder > li {
+  padding: 5px;
+  margin: 2px;
+  display: inline-block;
+}
+#holder > li[data-page] {
+  border: solid #a0a0a0 1px;
+  border-radius: 5px;
+}
+#holder > li.separator:before {
+  content: '...';
+}
+#holder > li.active {
+  background-color: darkblue;
+  color: #fff;
+}
+#holder > li[data-page]:hover {
+  cursor: pointer;
+}
+
+/*Sayfalama son*/
+
+.courseDiv {
+  width: 800px;
+  height: 200px;
+  
+}
+
+/* Course Tabs Start */
+
+nav > .nav.nav-tabs{
+
+  border: none;
+    color:#fff;
+    background:#272e38;
+    border-radius:0;
+
+}
+nav > div a.nav-item.nav-link,
+nav > div a.nav-item.nav-link.active
+{
+  border: none;
+    padding: 18px 25px;
+    color:#fff;
+    background:#272e38;
+    border-radius:0;
+}
+
+nav > div a.nav-item.nav-link.active:after
+ {
+  content: "";
+  position: relative;
+  bottom: -60px;
+  left: -10%;
+  border: 15px solid transparent;
+  border-top-color: #e74c3c ;
+}
+.tab-content{
+  background: #fdfdfd;
+    line-height: 25px;
+    border: 1px solid #ddd;
+    border-top:5px solid #e74c3c;
+    border-bottom:5px solid #e74c3c;
+    padding:30px 25px;
+}
+
+nav > div a.nav-item.nav-link:hover,
+nav > div a.nav-item.nav-link:focus
+{
+  border: none;
+    background: #e74c3c;
+    color:#fff;
+    border-radius:0;
+    transition:background 0.20s linear;
+}
+/* Course Tabs End*/
+
+
+

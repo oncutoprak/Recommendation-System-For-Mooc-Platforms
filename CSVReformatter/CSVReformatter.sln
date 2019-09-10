@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVReformatter", "CSVReformatter\CSVReformatter.csproj", "{01A8405D-1FFB-4780-9E49-B2360D9EA00A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01A8405D-1FFB-4780-9E49-B2360D9EA00A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A8405D-1FFB-4780-9E49-B2360D9EA00A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01A8405D-1FFB-4780-9E49-B2360D9EA00A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01A8405D-1FFB-4780-9E49-B2360D9EA00A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29E1F444-2CFB-4926-AA74-C977B7AF9465}
+	EndGlobalSection
+EndGlobal

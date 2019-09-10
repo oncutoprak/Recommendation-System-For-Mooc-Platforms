@@ -1,0 +1,12 @@
+flask
+flasgger==0.8.1
+httplib2
+stemming
+selenium
+matplotlib
+numpy
+pandas
+pymongo
+sklearn
+nltk
+requests

@@ -1,0 +1,7 @@
+C:\Users\Apox\source\repos\CSVReformatter\CSVReformatter\bin\Debug\CSVReformatter.exe.config
+C:\Users\Apox\source\repos\CSVReformatter\CSVReformatter\bin\Debug\CSVReformatter.exe
+C:\Users\Apox\source\repos\CSVReformatter\CSVReformatter\bin\Debug\CSVReformatter.pdb
+C:\Users\Apox\source\repos\CSVReformatter\CSVReformatter\obj\Debug\CSVReformatter.csprojAssemblyReference.cache
+C:\Users\Apox\source\repos\CSVReformatter\CSVReformatter\obj\Debug\CSVReformatter.csproj.CoreCompileInputs.cache
+C:\Users\Apox\source\repos\CSVReformatter\CSVReformatter\obj\Debug\CSVReformatter.exe
+C:\Users\Apox\source\repos\CSVReformatter\CSVReformatter\obj\Debug\CSVReformatter.pdb
